@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://uddiptagogoi2000.github.io/3-column-preview-card-component-challenge/)
+- Live Site URL: [live site](https://uddiptagogoi2000.github.io/3-column-preview-card-component-challenge/)
 
 ## My process
 
