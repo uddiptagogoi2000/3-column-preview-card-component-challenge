@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+	/* Fonts */
+	--font-primary: 'Big Shoulders Display', cursive;
+	--font-secondary: 'Lexend Deca', sans-serif;
+
+	/* Colors: Primary */
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+
+	/* Colors: Neutral */
+
+	/* *Paragrahps */
+	--transparent-white: hsla(0, 0%, 100%, 0.75);
+	/* *Background, Headings, Buttons */
+	--very-light-gray: hsl(0, 0%, 95%);
+}
+
+/* *Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 15px;
+}
+
+body {
+	font-family: var(--font-secondary);
+	color: var(--transparent-white);
+	background: var(--very-light-gray);
+}
+
+h1 {
+	font-family: var(--font-primary);
+	text-transform: uppercase;
+	color: var(--very-light-gray);
+}
+
+p {
+	line-height: 1.6;
+	font-size: .9rem;
+}
+
+/* *Utility Classes */
+.my-1 {
+	margin: 1rem 0;
+}
+
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	border: 2px solid transparent;
+	background: var(--very-light-gray);
+	padding: 0.8rem 2rem;
+	margin-top: 3rem;
+	border-radius: 50px;
+	transition: all 300ms ease;
+}
+
+.btn-sedans {
+	color: var(--bright-orange);
+}
+.btn-suvs {
+	color: var(--dark-cyan);
+}
+.btn-luxury {
+	color: var(--very-dark-cyan);
+}
+
+.btn:hover {
+	color: var(--very-light-gray);
+	background: transparent;
+	border: 2px solid var(--very-light-gray);
+}
+
+/* *********** */
+
+main {
+	max-width: 800px;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+main .container {
+	display: flex;
+}
+
+.card {
+	flex: 1;
+	padding: 2rem;
+}
+
+.card-sedans {
+	background: var(--bright-orange);
+	border-radius: 5px 0 0 5px;
+}
+
+.card-suvs {
+	background: var(--dark-cyan);
+}
+
+.card-luxury {
+	background: var(--very-dark-cyan);
+	border-radius: 0 5px 5px 0;
+}
+
+/* *Smartphone */
+@media (max-width: 768px) {
+	body main {
+		height: auto;
+	}
+
+	main .container {
+		flex-direction: column;
+		margin: 5rem 1.5rem;
+	}
+
+	.card {
+		border-radius: 0;
+		padding: 3rem 3.5rem;
+	}
+
+	.card .logo {
+		margin-top: 0;
+	}
+
+	.card p {
+		line-height: 1.6;
+		font-size: 1rem;
+	}
+
+	.card-sedans {
+		border-radius: 5px 5px 0 0;
+	}
+
+	.card-luxury {
+		border-radius: 0 0 5px 5px;
+	}
+
+	.btn {
+		margin-top: 1.5rem;
+	}
+}
+
+@media (max-width: 830px) and (min-width: 769px) {
+	main {
+		max-width: 700px;
+	}
+}
